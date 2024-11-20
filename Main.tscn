@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dq8m0v6q6nmxx"]
+
+[ext_resource type="Script" path="res://MainLevel.gd" id="1_g03sq"]
+[ext_resource type="PackedScene" uid="uid://b6wf4j8o7u0iv" path="res://NPCIdle.tscn" id="2_38bfb"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_g03sq")
+
+[node name="Area2D" parent="." instance=ExtResource("2_38bfb")]
+position = Vector2(121, 478)

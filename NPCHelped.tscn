@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3plrvf8bumv6"]
+
+[ext_resource type="Script" path="res://HelpedNPC.gd" id="1_gxkrl"]
+[ext_resource type="Texture2D" uid="uid://dqvtipxnequmn" path="res://icon.svg" id="2_8eqg8"]
+[ext_resource type="Script" path="res://xbutton.gd" id="3_03k2e"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_gxkrl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(659, 415)
+scale = Vector2(1.9375, 1.91406)
+texture = ExtResource("2_8eqg8")
+
+[node name="DesireLabel" type="Label" parent="."]
+visible = false
+offset_left = 471.0
+offset_top = 198.0
+offset_right = 858.0
+offset_bottom = 278.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Inventory" type="Panel" parent="."]
+visible = false
+offset_left = 222.0
+offset_top = 63.0
+offset_right = 433.0
+offset_bottom = 370.0
+
+[node name="EvalButton" type="Button" parent="."]
+visible = false
+offset_left = 324.0
+offset_top = 381.0
+offset_right = 428.0
+offset_bottom = 428.0
+
+[node name="Xbutton" type="Button" parent="."]
+visible = false
+offset_left = 228.0
+offset_top = 383.0
+offset_right = 277.0
+offset_bottom = 429.0
+script = ExtResource("3_03k2e")
+
+[connection signal="pressed" from="EvalButton" to="." method="_on_eval_button_pressed"]
